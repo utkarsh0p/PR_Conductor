@@ -15,7 +15,7 @@ code reviews for GitHub Pull Requests using LLMs.
 
 ## Environment Variables
 - GITHUB_TOKEN
-- LLM_API_KEY
+- GEMINI_API_KEY
 
 ## Run
 ```bash

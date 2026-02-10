@@ -1,0 +1,25 @@
+name: demo pr reviewer
+
+on:
+  pull_request:
+    types: [opened]
+
+permissions:
+  pull-requests: write
+  issues: write
+  contents: read
+
+jobs:
+  send-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: send pr data to backend
+        run: |
+          curl -v -f -X POST http://3.80.154.24:8000/review \
+            -H "Content-Type: application/json" \
+            -d '{
+              "repo": "${{ github.repository }}",
+              "pr_number": "${{ github.event.pull_request.number }}",
+              "title": "${{ github.event.pull_request.title }}"
+            }'
+
