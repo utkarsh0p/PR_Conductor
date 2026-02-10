@@ -17,6 +17,10 @@ code reviews for GitHub Pull Requests using LLMs.
 - GITHUB_TOKEN
 - GEMINI_API_KEY
 
+## Key point to take care of
+- Change the endpoint of instance in the workflow.yml to your endpoint ( backend ) wich has your github_token
+- Otherwise it will not post the pr review comment
+
 ## Run
 ```bash
 docker build -t pr-conductor .
