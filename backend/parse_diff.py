@@ -5,8 +5,10 @@ def parse_diff(patch: str):
     for line in patch.split("\n"):
         # hunk header
         if line.startswith("@@"):
-            # @@ -84,3 +84,4 @@
-            new_line_num = int(line.split("+")[1].split(",")[0]) - 1
+            # @@ -84,3 +84,4 @@ optional context
+            part = line.split("+")[1]
+            num = part.split(",")[0].split(" ")[0]
+            new_line_num = int(num) - 1
 
         elif line.startswith("+") and not line.startswith("+++"):
             new_line_num += 1
