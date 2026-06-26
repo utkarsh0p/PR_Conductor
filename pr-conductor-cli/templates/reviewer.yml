@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Trigger PR Conductor review
         run: |
-          curl -f -X POST https://your-pr-conductor-backend.com/review \
+          curl -f -X POST https://backend.cember.in/review \
             -H "Content-Type: application/json" \
             -d '{
               "repo": "${{ github.repository }}",

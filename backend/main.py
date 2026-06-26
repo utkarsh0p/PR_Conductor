@@ -33,7 +33,7 @@ if not MONGO_URI:
 
 GITHUB_CLIENT_ID = os.getenv("GITHUB_CLIENT_ID")
 GITHUB_CLIENT_SECRET = os.getenv("GITHUB_CLIENT_SECRET")
-FRONTEND_URL = os.getenv("FRONTEND_URL", "http://localhost:5173")
+FRONTEND_URL = os.getenv("FRONTEND_URL", "https://frontend.cember.in")
 
 mongo_client = MongoClient(MONGO_URI)
 db = mongo_client["pr-conductor"]

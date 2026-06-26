@@ -1,6 +1,6 @@
 import './style.css'
 
-const API_URL = 'http://localhost:8000'
+const API_URL = 'https://backend.cember.in'
 
 const params = new URLSearchParams(window.location.search)
 const githubToken = params.get('github_token')
