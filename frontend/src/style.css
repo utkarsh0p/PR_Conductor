@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #0d1117;
+  color: #c9d1d9;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#app {
+  width: 100%;
+  max-width: 460px;
+  padding: 20px;
+}
+
+.card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 40px 32px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #f0f6fc;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #8b949e;
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #c9d1d9;
+  margin-bottom: 6px;
+}
+
+input {
+  width: 100%;
+  padding: 10px 12px;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  color: #c9d1d9;
+  font-size: 14px;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+input:focus {
+  border-color: #58a6ff;
+}
+
+input::placeholder {
+  color: #484f58;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #238636;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2ea043;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.result {
+  margin-top: 24px;
+  padding: 16px;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  display: none;
+}
+
+.result.show {
+  display: block;
+}
+
+.result h3 {
+  font-size: 14px;
+  color: #3fb950;
+  margin-bottom: 12px;
+}
+
+.secret-key {
+  background: #161b22;
+  padding: 10px 12px;
+  border-radius: 4px;
+  font-family: ui-monospace, monospace;
+  font-size: 13px;
+  color: #f0f6fc;
+  word-break: break-all;
+  margin-bottom: 12px;
+}
+
+.steps {
+  font-size: 13px;
+  color: #8b949e;
+  line-height: 1.6;
+}
+
+.steps li {
+  margin-bottom: 4px;
+}
+
+.github-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: #24292e;
+  color: #fff;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.github-btn:hover {
+  background: #2f363d;
+}
+
+.setup-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.step {
+  display: flex;
+  gap: 14px;
+}
+
+.step-number {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  background: #238636;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.step-content h4 {
+  font-size: 14px;
+  color: #f0f6fc;
+  margin-bottom: 6px;
+}
+
+.step-detail {
+  font-size: 13px;
+  color: #8b949e;
+  margin-bottom: 6px;
+}
+
+.step-detail code {
+  background: #0d1117;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #f0f6fc;
+}
+
+.secret-key-wrapper {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.secret-key {
+  flex: 1;
+}
+
+.copy-btn {
+  width: auto;
+  padding: 6px 14px;
+  font-size: 12px;
+  background: #30363d;
+  border: 1px solid #484f58;
+  color: #c9d1d9;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.copy-btn:hover {
+  background: #3d444d;
+}
+
+.nav-path {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin: 8px 0;
+}
+
+.nav-item {
+  background: #0d1117;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
+}
+
+.nav-item.highlight {
+  background: #238636;
+  border-color: #238636;
+  color: #fff;
+}
+
+.nav-arrow {
+  color: #484f58;
+  font-size: 12px;
+}
+
+.command-box {
+  background: #0d1117;
+  padding: 10px 12px;
+  border-radius: 4px;
+  font-family: ui-monospace, monospace;
+  font-size: 13px;
+  color: #f0f6fc;
+  border: 1px solid #30363d;
+  margin-top: 6px;
+}
+
+.error {
+  color: #f85149;
+  font-size: 14px;
+  margin-top: 12px;
+  display: none;
+}
+
+.error.show {
+  display: block;
+}

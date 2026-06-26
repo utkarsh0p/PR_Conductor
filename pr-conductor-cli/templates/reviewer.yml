@@ -1,0 +1,25 @@
+name: PR Conductor
+
+on:
+  pull_request:
+    types: [opened]
+
+permissions:
+  pull-requests: write
+  issues: write
+  contents: read
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger PR Conductor review
+        run: |
+          curl -f -X POST https://your-pr-conductor-backend.com/review \
+            -H "Content-Type: application/json" \
+            -d '{
+              "repo": "${{ github.repository }}",
+              "pr_number": "${{ github.event.pull_request.number }}",
+              "title": "${{ github.event.pull_request.title }}",
+              "secret_key": "${{ secrets.PR_CONDUCTOR_SECRET }}"
+            }'

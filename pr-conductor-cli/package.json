@@ -1,0 +1,15 @@
+{
+  "name": "pr-conductor",
+  "version": "1.1.0",
+  "description": "CLI to set up PR Conductor automated code reviews in your repo",
+  "bin": {
+    "pr-conductor": "./bin/cli.js"
+  },
+  "keywords": [
+    "pr",
+    "code-review",
+    "github",
+    "automation"
+  ],
+  "license": "MIT"
+}
