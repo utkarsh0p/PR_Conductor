@@ -1,6 +1,6 @@
 {
   "name": "pr-conductor",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "CLI to set up PR Conductor automated code reviews in your repo",
   "bin": {
     "pr-conductor": "./bin/cli.js"
